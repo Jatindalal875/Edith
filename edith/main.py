@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hello Myself *EDITH*
+`Hello Myself *EDITH🤖*
 `I'm here to help you manage your groups! Hit Help button below to find out more about how to use me to my full potential.` 
 """
 
@@ -355,7 +355,7 @@ def Edith_about_callback(update: Update, context: CallbackContext):
                  ❍ I check for admins' permissions before executing any command and more stuffs
                  \n EDITH’S licensed under the GNU General Public License v3.0_
                  Here is the [Contact My Owner](https://t.me/GANGLAND_01).
-                 If you have any question about EDITH, let us know at @TBH_N3TWORK.""",
+                 If you have any question about EDITH, let us know at✅ @TBH_N3TWORK.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -677,7 +677,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "BABY I AM BACK ")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "BABY I AM BACK😈🔱 ")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
