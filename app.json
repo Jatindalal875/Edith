@@ -1,27 +1,32 @@
 {
-      "name": “EDITH",
-      "description": "Telegram group management bot.",
+      "name": "EDITH",
+      "description": "A Powerful  Telegram Group management bot with anime theme.",
       "keywords": [
          "telegram",
-         "anime",
+         "advance",
          "group",
          "manager",
-         "Masha"
-      ],   
+         "edith"
+      ],
+    
+   "logo":    "",  
    "repository": "https://github.com/Jatindalal875/EDITH",
    "addons": [
-      {
+          {
          "options": {
-            "version": "12"
+            "version": "13"
          },
          "plan": "heroku-postgresql"
       }
    ],
-  "buildpacks": [
+   "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     }
-   ],
+  ],  
    "env": {
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
@@ -37,16 +42,17 @@
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
          "value": ""
-      },      
+      },    
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
          "value": ""
-      },
-      "BOT_ID": {
-         "description": "Your bot ID.. Use any other bot to get it.",
+     },
+
+      "STRING_SESSION": {
+         "description": "Fill with telethon string session.",
          "required": true,
-         "value": ""
+         "value": "" 
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -56,14 +62,24 @@
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
         "required": false
       },
-      "OWNER_USERNAME": {
-         "description": "Your username without the @",
+      "BOT_USERNAME": {
+         "description": "username of your bot without the @",
          "value": ""
       },
+
+      "BOT_ID": {
+         "description": "to get your bot_id using other bot or userbot",
+         "value": ""
+      },
+
+      "OWNER_USERNAME": {
+         "description": "Your username without the @",
+         "value": "hunter_is_back"
+      },
       "SUPPORT_CHAT": {
-         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to EDITH support than consider you made an enemy.",
+         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to edith support than consider you made an enemy.",
          "required": true,
-         "value": "@TBH_N3TWORK"
+         "value": "@tbh_n3twork"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
@@ -81,12 +97,12 @@
      "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-123456798"
+         "value": "-1001626554919"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-123456798"
+         "value": "-1001626554919"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
@@ -97,17 +113,34 @@
          "description": "Required for timezone information. Get yours from https://timezonedb.com/api",
          "required": true,
          "value": "-xyz"
-      },
-      "API_OPENWEATHER": {
-        "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
+     }, 
+
+      "OPENWEATHERMAP_ID": {
+        "description": "Get your own API from https://api.openweathermap.org/data/2.5/weather",
         "value": "",
         "required": false
       },
+
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
          "required": false,
          "value": ""
-      },
+     },
+      "ERROR_LOG": {
+         "description": "ID of log for show error.",
+         "required": false,
+         "value": ""
+     },
+        "ARQ_API_KEY": {
+            "description": "Get this from @ARQRobot.",
+            "required": true
+        },
+
+      "SPAMWATCH_API": {
+         "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
+         "required": false,
+         "value": ""
+      }, 
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
          "value": "True"
@@ -151,7 +184,7 @@
          "required": false,
          "value": ""
       },
-      "No_LOAD": {
+      "NO_LOAD": {
          "description": "Dont load these modules cause they shit, space separation",
          "required": false,
          "value": "rss"
@@ -166,23 +199,13 @@
          "value": "True"
       },
       "DONATION_LINK": {
-         "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to TBH",
+         "description": "Optional: link where you would like to receive donations. If you are a noob, better leave it linking to tbh",
          "required": false,
          "value": ""
       },
       "DEL_CMDS": {
          "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
          "value": "True"
-      },
-      "AI_API_KEY": {
-      "description": "Make your bot talk using Intellivoid's chatbot API, get your key from https://coffeehouse.intellivoid.net/",
-         "required": false,
-         "value": ""
-   },      
-      "BAN_STICKER": {
-         "description": "ID of the sticker you want to use when banning people.",
-         "required": false,
-         "value": ""
       },
       "WALL_API": {
          "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
