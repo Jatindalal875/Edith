@@ -1,6 +1,6 @@
 import os
 import math
-from io import BytesIO
+from io import Edith
 from cloudscraper import CloudScraper
 import urllib.request as urllib
 from urllib.parse import quote as urlquote
