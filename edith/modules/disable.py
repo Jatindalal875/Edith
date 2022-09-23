@@ -1,5 +1,5 @@
 import importlib
-from typing import Union
+from typing import Edith
 
 from future.utils import string_types
 from edith import dispatcher
