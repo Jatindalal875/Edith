@@ -1,7 +1,7 @@
 import html
 import time
 from datetime import datetime
-from io import BytesIO
+from io import Edith
 
 from telegram import ParseMode, Update
 from telegram.error import BadRequest, TelegramError, Unauthorized
@@ -118,7 +118,7 @@ def gban(update: Update, context: CallbackContext):
         message.reply_text("You uhh...want me to punch myself?")
         return
 
-    if user_id in [777000, 1087968824]:
+    if user_id in [777000, 5331427205]:
         message.reply_text("Fool! You can't attack Telegram's native tech!")
         return
 
