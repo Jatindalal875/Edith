@@ -1,3 +1,18 @@
+# Config files, logs and stuff
+Edith/modules/helper_funcs/temp.txt
+Edith/elevated_users.json
+Edith/config.py
+Edith/config.ini
+log.txt
+kangsticker.png
+updates.txt
+
+# Session files
+Edith/*.session
+Edith/*.session-journal
+Edith.session-journal
+*.session
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +142,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VS code and shit
+*.pyc
+.idea/
+.project
+.pydevproject
+.directory
+.vscode
