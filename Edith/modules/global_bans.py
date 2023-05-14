@@ -1,7 +1,7 @@
 import html
 import time
 from datetime import datetime
-from io import Edith
+from io import BytesIO
 
 from telegram import ParseMode, Update
 from telegram.error import BadRequest, TelegramError, Unauthorized
@@ -14,31 +14,30 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import edith.modules.sql.global_bans_sql as sql
-from edith.modules.sql.users_sql import get_user_com_chats
-from edith import (
+import Edith.modules.sql.global_bans_sql as sql
+from Edith.modules.sql.users_sql import get_user_com_chats
+from Edith import (
     DEV_USERS,
     EVENT_LOGS,
     OWNER_ID,
     STRICT_GBAN,
     DRAGONS,
     SUPPORT_CHAT,
-    SPAMWATCH_SUPPORT_CHAT,
     DEMONS,
     TIGERS,
-    WOLVES,   
+    WOLVES,
     dispatcher,
 )
-from edith.modules.helper_funcs.chat_status import (
+from Edith.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from edith.modules.helper_funcs.extraction import (
+from Edith.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from edith.modules.helper_funcs.misc import send_to_list
+from Edith.modules.helper_funcs.misc import send_to_list
 
 GBAN_ENFORCE_GROUP = 6
 
@@ -118,7 +117,7 @@ def gban(update: Update, context: CallbackContext):
         message.reply_text("You uhh...want me to punch myself?")
         return
 
-    if user_id in [777000, 5331427205]:
+    if user_id in [777000, 1087968824]:
         message.reply_text("Fool! You can't attack Telegram's native tech!")
         return
 
@@ -413,25 +412,6 @@ def gbanlist(update: Update, context: CallbackContext):
 
 
 def check_and_ban(update, user_id, should_message=True):
-
-    chat = update.effective_chat  # type: Optional[Chat]
-    try:
-        sw_ban = sw.get_ban(int(user_id))
-    except:
-        sw_ban = None
-
-    if sw_ban:
-        update.effective_chat.kick_member(user_id)
-        if should_message:
-            update.effective_message.reply_text(
-                f"<b>Alert</b>: this user is globally banned.\n"
-                f"<code>*bans them from here*</code>.\n"
-                f"<b>Appeal chat</b>: {SPAMWATCH_SUPPORT_CHAT}\n"
-                f"<b>User ID</b>: <code>{sw_ban.id}</code>\n"
-                f"<b>Ban Reason</b>: <code>{html.escape(sw_ban.reason)}</code>",
-                parse_mode=ParseMode.HTML,
-            )
-        return
 
     if sql.is_user_gbanned(user_id):
         update.effective_chat.kick_member(user_id)
