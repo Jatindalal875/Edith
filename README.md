@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://app.codacy.com/manual/Jatindalal875/Edith/dashboard"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=brightgreen&logo=codacy&logoColor=green&style=for-the-badge" alt="Codacy" /></a>
     <a href="https://github.com/Jatindalal875/Edith"> <img src="https://img.shields.io/github/repo-size/Jatindalal875/Edith?color=orange&logo=github&logoColor=green&style=for-the-badge" /></a>
-    <a href="https://github.com/Jatindalal875/Edith/commits/prince"> <img src="https://img.shields.io/github/last-commit/Jatindalal875/Edith?color=brown&logo=github&logoColor=green&style=for-the-badge" /></a>
+    <a href="https://github.com/Jatindalal875/Edith/commits/TBH"> <img src="https://img.shields.io/github/last-commit/Jatindalal875/Edith?color=brown&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/Jatindalal875/Edith/issues"> <img src="https://img.shields.io/github/issues/Jatindalal875/Edith?color=blueviolet&logo=github&logoColor=green&style=for-the-badge" /></a>
     <a href="https://github.com/Jatindalal875/Edith/network/members"> <img src="https://img.shields.io/github/forks/Jatindalal875/Edith?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>  
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
