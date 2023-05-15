@@ -10,19 +10,12 @@
       ],   
    "repository": "https://github.com/Jatindalal875/Edith",
      addons": [
-
       {
-
          "options": {
-
             "version": "12"
-
          },
-
          "plan": "heroku-postgresql"
-
       }
-
    ],
    "env": {
       "TOKEN": {
